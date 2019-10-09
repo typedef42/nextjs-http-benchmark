@@ -1,0 +1,84 @@
+version: '3'
+
+services:
+  server_next:
+    build:
+      context: .
+    image: h2-tests_server-next
+    env_file: docker-compose.env
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.backend=srv-next'
+      - "traefik.frontend.rule=Host:/next"
+      - 'traefik.port=5000'
+      - 'traefik.frontend.entryPoints=https'
+
+  server_https:
+    build:
+      context: .
+    image: h2-tests_server-https
+    env_file: docker-compose.env
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.backend=srv-https'
+      - "traefik.frontend.rule=Host:/https"
+      - 'traefik.port=5000'
+      - 'traefik.frontend.entryPoints=https'
+
+  server_express:
+    build:
+      context: .
+    image: h2-tests_server-h2
+    env_file: docker-compose.env
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.backend=srv-express'
+      - "traefik.frontend.rule=Host:/express"
+      - 'traefik.port=5000'
+      - 'traefik.frontend.entryPoints=https'
+
+  server_fastify:
+    build:
+      context: .
+    image: h2-tests_server-fastify
+    env_file: docker-compose.env
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.backend=srv-fastify'
+      - "traefik.frontend.rule=Host:/fastify"
+      - 'traefik.port=5000'
+      - 'traefik.frontend.entryPoints=https'
+
+  k6:
+    container_name: h2-test_k6
+    image: loadimpact/k6
+    ports:
+      - '6565:6565'
+    volumes:
+      - "./benchmarks/:/"
+    command: 'version'
+
+  traefik:
+    container_name: h2-tests_traefik
+    image: traefik:1.7.2-alpine
+    networks:
+      - traefik
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./traefik/traefik.toml:/traefik.toml"
+      - "./traefik/certs/:/certs/"
+    restart: unless-stopped
+    labels:
+      - "traefik.frontend.rule=Host:traefik.dev"
+      - "traefik.frontend.entryPoints=http,https"
+      - "traefik.backend=traefik"
+      - "traefik.port=8080"
+
+networks:
+  traefik:
+    external:
+      name: traefik

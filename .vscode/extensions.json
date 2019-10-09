@@ -1,0 +1,38 @@
+{
+  // See http://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    "esbenp.prettier-vscode",
+    "aureliaeffect.aurelia",
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "coenraads.bracket-pair-colorizer",
+    "arturbelico.code-sum-up",
+    "anseki.vscode-color",
+    "msjsdiag.debugger-for-chrome",
+    "ms-azuretools.vscode-docker",
+    "joelday.docthis",
+    "editorconfig.editorconfig",
+    "dsznajder.es7-react-js-snippets",
+    "dbaeumer.vscode-eslint",
+    "tombonnike.vscode-status-bar-format-toggle",
+    "donjayamanne.githistory",
+    "kumar-harsh.graphql-for-vscode",
+    "ecmel.vscode-html-css",
+    "zignd.html-css-class-completion",
+    "xabikos.javascriptsnippets",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "mrmlnc.vscode-scss",
+    "gruntfuggly.todo-tree",
+    "awesomektvn.toggle-semicolon",
+    "dakara.transformer",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": ["hookyqr.beautify", "dbaeumer.jshint"]
+}
