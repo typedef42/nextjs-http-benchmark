@@ -5,10 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        TARGET_PM2_APP: "server-next"
     image: h2-tests_server-next
     container_name: h2-tests_next
-    environment:
-      TARGET_PM2_APP: "server-next"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=srv-next"
@@ -19,10 +19,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        TARGET_PM2_APP: "server-https"
     image: h2-tests_server-https
     container_name: h2-tests_https
-    environment:
-      TARGET_PM2_APP: "server-https"
     volumes:
       - "./certs/:/certs/"
     labels:
@@ -35,10 +35,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        TARGET_PM2_APP: "server-express"
     image: h2-tests_server-express
     container_name: h2-tests_express
-    environment:
-      TARGET_PM2_APP: "server-express"
     volumes:
       - "./certs/:/certs/"
     labels:
@@ -51,10 +51,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        TARGET_PM2_APP: "server-fastify"
     image: h2-tests_server-fastify
     container_name: h2-tests_fastify
-    environment:
-      TARGET_PM2_APP: "server-fastify"
     volumes:
       - "./certs/:/certs/"
     labels:

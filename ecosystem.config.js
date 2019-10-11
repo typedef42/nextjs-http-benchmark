@@ -44,7 +44,7 @@ module.exports = {
     },
     {
       name: "server-fastify",
-      script: "npm run stage-fast",
+      script: "npm run stage-fastify",
       instances: 1,
       autorestart: true,
       watch: false,
