@@ -1,6 +1,7 @@
 const { createServer } = require("https");
 const { parse } = require("url");
-const { readFileSync } = require("fs");
+const path = require("path");
+const fs = require("fs");
 const next = require("next");
 
 const port = 3001;
@@ -9,8 +10,8 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const httpsOptions = {
-  key: readFileSync("./privateKey.key"),
-  cert: readFileSync("./certificate.crt")
+  key: fs.readFileSync(path.join(__dirname, "/../certs/privateKey.key")),
+  cert: fs.readFileSync(path.join(__dirname, "/../certs/certificate.crt"))
 };
 
 app.prepare().then(() => {
@@ -19,6 +20,6 @@ app.prepare().then(() => {
     handle(req, res, parsedUrl);
   }).listen(port, err => {
     if (err) throw err;
-    console.log(`> Ready on https://localhost:${port}`);
+    console.log(`Node https Server listening on https://localhost:${port}`);
   });
 });
