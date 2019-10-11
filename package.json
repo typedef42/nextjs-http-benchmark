@@ -2,17 +2,19 @@
   "name": "nextjs-http-benchmark",
   "scripts": {
     "dev-next": "cross-env NODE_ENV=development next",
-    "dev-fast": "cross-env NODE_ENV=development node server-fastify.js",
-    "dev-express": "cross-env NODE_ENV=development node server-express.js",
-    "dev-https": "cross-env NODE_ENV=development node server-https.js",
+    "dev-fastify": "cross-env NODE_ENV=development node ./server/server-fastify-h2.js",
+    "dev-express": "cross-env NODE_ENV=development node ./server/server-express-h2.js",
+    "dev-https": "cross-env NODE_ENV=development node ./server/server-https.js",
     "build": "next build",
     "export": "next export",
     "clean": "cross-env rimraf ./.next ./out",
     "release": "cross-env NODE_ENV=production npm run clean && npm run build && npm run export",
     "stage-next": "next start",
-    "stage-https": "cross-env NODE_ENV=production node server-https.js",
-    "stage-express": "cross-env NODE_ENV=production node server-express-h2.js",
-    "stage-fast": "cross-env NODE_ENV=production node server-fastify.js",
+    "stage-https": "cross-env NODE_ENV=production node ./server/server-https.js",
+    "stage-express": "cross-env NODE_ENV=production node ./server/server-express-h2.js",
+    "stage-fastify": "cross-env NODE_ENV=production node ./server/server-fastify-h2.js",
+    "dc:up": "docker-compose up --build -d",
+    "dc:down": "docker-compose down",
     "generate-certificate": "openssl req -x509 -newkey rsa:2048 -nodes -sha256 -keyout privateKey.key -out certificate.crt"
   },
   "dependencies": {
@@ -39,11 +41,17 @@
     "spdy": "^4.0.1",
     "store": "^2.0.12",
     "url-loader": "^2.1.0",
-    "webp-loader": "^0.5.0"
+    "next-images": "^1.2.0",
+    "next-optimized-images": "^2.5.3",
+    "next-progressbar": "^1.0.0",
+    "imagemin-mozjpeg": "^8.0.0",
+    "imagemin-optipng": "^7.0.0",
+    "imagemin-svgo": "^7.0.0",
+    "cross-env": "^5.2.1",
+    "rimraf": "^3.0.0"
   },
   "devDependencies": {
     "commitizen": "^4.0.3",
-    "cross-env": "^5.2.1",
     "cz-conventional-changelog": "^3.0.2",
     "eslint": "^6.3.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -55,14 +63,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.12.3",
     "eslint-plugin-security": "^1.4.0",
-    "next-images": "^1.2.0",
-    "next-optimized-images": "^2.5.3",
-    "imagemin-mozjpeg": "^8.0.0",
-    "imagemin-optipng": "^7.0.0",
-    "imagemin-svgo": "^7.0.0",
-    "next-progressbar": "^1.0.0",
-    "prettier": "^1.18.2",
-    "rimraf": "^3.0.0"
+    "prettier": "^1.18.2"
   },
   "config": {
     "commitizen": {

@@ -1,68 +1,83 @@
-version: '3'
+version: "3"
 
 services:
   server_next:
     build:
       context: .
+      dockerfile: Dockerfile
     image: h2-tests_server-next
-    env_file: docker-compose.env
+    container_name: h2-tests_next
+    environment:
+      TARGET_PM2_APP: "server-next"
     labels:
-      - 'traefik.enable=true'
-      - 'traefik.backend=srv-next'
-      - "traefik.frontend.rule=Host:/next"
-      - 'traefik.port=5000'
-      - 'traefik.frontend.entryPoints=https'
+      - "traefik.enable=true"
+      - "traefik.backend=srv-next"
+      - "traefik.frontend.rule=Path:srv-next./next"
+      - "traefik.frontend.entryPoints=https"
 
   server_https:
     build:
       context: .
+      dockerfile: Dockerfile
     image: h2-tests_server-https
-    env_file: docker-compose.env
+    container_name: h2-tests_https
+    environment:
+      TARGET_PM2_APP: "server-https"
+    volumes:
+      - "./certs/:/certs/"
     labels:
-      - 'traefik.enable=true'
-      - 'traefik.backend=srv-https'
-      - "traefik.frontend.rule=Host:/https"
-      - 'traefik.port=5000'
-      - 'traefik.frontend.entryPoints=https'
+      - "traefik.enable=true"
+      - "traefik.backend=srv-https"
+      - "traefik.frontend.rule=Path:srv-https./https"
+      - "traefik.frontend.entryPoints=https"
 
   server_express:
     build:
       context: .
-    image: h2-tests_server-h2
-    env_file: docker-compose.env
+      dockerfile: Dockerfile
+    image: h2-tests_server-express
+    container_name: h2-tests_express
+    environment:
+      TARGET_PM2_APP: "server-express"
+    volumes:
+      - "./certs/:/certs/"
     labels:
-      - 'traefik.enable=true'
-      - 'traefik.backend=srv-express'
-      - "traefik.frontend.rule=Host:/express"
-      - 'traefik.port=5000'
-      - 'traefik.frontend.entryPoints=https'
+      - "traefik.enable=true"
+      - "traefik.backend=srv-express"
+      - "traefik.frontend.rule=Path:srv-express./express"
+      - "traefik.frontend.entryPoints=https"
 
   server_fastify:
     build:
       context: .
+      dockerfile: Dockerfile
     image: h2-tests_server-fastify
-    env_file: docker-compose.env
+    container_name: h2-tests_fastify
+    environment:
+      TARGET_PM2_APP: "server-fastify"
+    volumes:
+      - "./certs/:/certs/"
     labels:
-      - 'traefik.enable=true'
-      - 'traefik.backend=srv-fastify'
-      - "traefik.frontend.rule=Host:/fastify"
-      - 'traefik.port=5000'
-      - 'traefik.frontend.entryPoints=https'
+      - "traefik.enable=true"
+      - "traefik.backend=srv-fastify"
+      - "traefik.frontend.rule=Path:srv-fastify./fastify"
+      - "traefik.frontend.entryPoints=https"
 
   k6:
     container_name: h2-test_k6
     image: loadimpact/k6
     ports:
-      - '6565:6565'
+      - "6565:6565"
     volumes:
-      - "./benchmarks/:/"
-    command: 'version'
+      - "./benchmarks/:/scripts/"
+    command: "version"
 
   traefik:
     container_name: h2-tests_traefik
     image: traefik:1.7.2-alpine
-    networks:
-      - traefik
+    # command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
+    # networks:
+    #   - traefik
     ports:
       - "80:80"
       - "443:443"
@@ -70,15 +85,14 @@ services:
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./traefik/traefik.toml:/traefik.toml"
-      - "./traefik/certs/:/certs/"
+      - "./certs/:/certs/"
     restart: unless-stopped
     labels:
       - "traefik.frontend.rule=Host:traefik.dev"
       - "traefik.frontend.entryPoints=http,https"
       - "traefik.backend=traefik"
       - "traefik.port=8080"
-
-networks:
-  traefik:
-    external:
-      name: traefik
+# networks:
+#   traefik:
+#     external:
+#       name: traefik
