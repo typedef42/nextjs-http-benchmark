@@ -34,8 +34,14 @@ app.prepare().then(() => {
     return app.render(req, res, "/", req.query);
   });
 
-  expressApp.get("/public-resume", (req, res) => {
-    return app.render(req, res, "/public-resume", req.query);
+  expressApp.get("/low-images", (req, res) => {
+    return app.render(req, res, "/low-images", req.query);
+  });
+  expressApp.get("/medium-images", (req, res) => {
+    return app.render(req, res, "/medium-images", req.query);
+  });
+  expressApp.get("/heavy-images", (req, res) => {
+    return app.render(req, res, "/heavy-images", req.query);
   });
 
   expressApp.all("*", (req, res) => {
