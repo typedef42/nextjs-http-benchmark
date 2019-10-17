@@ -13,7 +13,7 @@ export default class Home extends React.Component {
     for (let rowNumber = 0; rowNumber < this.rowSize; ++rowNumber) {
       let rowData = [];
       for (let colNumber = 0; colNumber < this.colSize; ++colNumber) {
-        rowData.push(`/static/img/jpg/JPEG/100px180-${rowNumber * this.colSize + colNumber + 1}.jpg`);
+        rowData.push(`./static/img/tiles/100px180-${rowNumber * this.colSize + colNumber + 1}.jpg`);
       }
       grid.push(rowData);
     }
