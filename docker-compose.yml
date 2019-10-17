@@ -4,95 +4,144 @@ services:
   server_next:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.h2-tests
       args:
         TARGET_PM2_APP: "server-next"
     image: h2-tests_server-next
     container_name: h2-tests_next
+    networks:
+      internal-network:
     labels:
       - "traefik.enable=true"
       - "traefik.backend=srv-next"
-      - "traefik.frontend.rule=Path:srv-next./next"
+      - "traefik.port=3000"
+      - "traefik.frontend.rule=Host:next.test,next.localhost"
       - "traefik.frontend.entryPoints=https"
 
   server_https:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.h2-tests
       args:
         TARGET_PM2_APP: "server-https"
     image: h2-tests_server-https
     container_name: h2-tests_https
+    networks:
+      internal-network:
     volumes:
       - "./certs/:/certs/"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=srv-https"
-      - "traefik.frontend.rule=Path:srv-https./https"
+      - "traefik.port=3001"
+      - "traefik.protocol=https"
+      - "traefik.frontend.rule=Host:https.test,https.localhost"
       - "traefik.frontend.entryPoints=https"
 
   server_express:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.h2-tests
       args:
         TARGET_PM2_APP: "server-express"
     image: h2-tests_server-express
     container_name: h2-tests_express
+    networks:
+      internal-network:
     volumes:
       - "./certs/:/certs/"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=srv-express"
-      - "traefik.frontend.rule=Path:srv-express./express"
+      - "traefik.port=3002"
+      - "traefik.protocol=https"
+      - "traefik.frontend.rule=Host:express.test,express.localhost"
       - "traefik.frontend.entryPoints=https"
+
+      # - "traefik.frontend.entryPoints=srv-express"
+      # - "traefik.frontend.rule=Host:express.localhost,express.h2-tests_traefik"
+      # - "traefik.passHostHeader=true"
+      # - "traefik.frontend.rule=PathPrefixStrip:/express"
+      # - "traefik.frontend.redirect.regex=^(.*)/express$$"
+      # - "traefik.frontend.redirect.replacement=$$1/express/"
+      # - "traefik.frontend.rule=PathPrefix:/express;ReplacePathRegex: ^/express/(.*) /$$1"
 
   server_fastify:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.h2-tests
       args:
         TARGET_PM2_APP: "server-fastify"
     image: h2-tests_server-fastify
     container_name: h2-tests_fastify
+    networks:
+      internal-network:
     volumes:
       - "./certs/:/certs/"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=srv-fastify"
-      - "traefik.frontend.rule=Path:srv-fastify./fastify"
+      - "traefik.port=3003"
+      - "traefik.protocol=https"
+      - "traefik.frontend.rule=Host:fastify.test,fastify.localhost"
       - "traefik.frontend.entryPoints=https"
 
   k6:
     container_name: h2-test_k6
     image: loadimpact/k6
+    networks:
+      internal-network:
     ports:
       - "6565:6565"
     volumes:
       - "./benchmarks/:/scripts/"
+      - "./static/k6-out/:/output/"
     command: "version"
+
+  benchmark:
+    container_name: h2-tests_benchmark
+    image: h2-tests_server-benchmark
+    build:
+      context: .
+      dockerfile: Dockerfile.benchmark
+    networks:
+      internal-network:
+    volumes:
+      - "./static/benchmark-output/:/output/"
 
   traefik:
     container_name: h2-tests_traefik
     image: traefik:1.7.2-alpine
-    # command: --web --docker --docker.domain=docker.localhost --logLevel=DEBUG
-    # networks:
-    #   - traefik
+    command: --web --docker --docker.domain=app.test --logLevel=DEBUG
+    depends_on:
+      - "server_next"
+      - "server_https"
+      - "server_express"
+      - "server_fastify"
+    networks:
+      outside-world:
+      internal-network:
+        aliases:
+          - "next.test"
+          - "https.test"
+          - "express.test"
+          - "fastify.test"
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8080"
+      - "4242:4242"
     volumes:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./traefik/traefik.toml:/traefik.toml"
       - "./certs/:/certs/"
     restart: unless-stopped
-    labels:
-      - "traefik.frontend.rule=Host:traefik.dev"
-      - "traefik.frontend.entryPoints=http,https"
-      - "traefik.backend=traefik"
-      - "traefik.port=8080"
-# networks:
-#   traefik:
-#     external:
-#       name: traefik
+    # labels:
+    #   - "traefik.frontend.rule=HostRegexp:traefik.dev"
+    #   - "traefik.frontend.entryPoints=http,https"
+    #   - "traefik.backend=traefik"
+    #   - "traefik.port=8080"
+
+networks:
+  internal-network:
+    internal: true
+  outside-world:

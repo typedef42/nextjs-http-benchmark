@@ -1,15 +1,33 @@
 defaultEntryPoints = ["http", "https"]
 
+logLevel = "DEBUG"
+insecureSkipVerify = true
+
+[traefikLog]
+  filePath = "/var/log/traefik.log"
+
+[accessLog]
+  filePath = "/var/log/traefik.log"
+
 [entryPoints]
   [entryPoints.dashboard]
-    address = ":8080"
+    address = ":4242"
+      [entryPoints.dashboard.tls]
   [entryPoints.http]
     address = ":80"
+    compress = true
       [entryPoints.http.redirect]
         entryPoint = "https"
   [entryPoints.https]
     address = ":443"
+    compress = true
       [entryPoints.https.tls]
 
 [api]
 entrypoint="dashboard"
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "docker.localhost"
+watch = true
+exposedByDefault = true

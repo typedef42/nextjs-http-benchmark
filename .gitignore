@@ -22,3 +22,6 @@ yarn-error.log*
 .chrome/
 privateKey.key
 certificate.crt
+benchmarks/node_modules/
+static/k6-out/
+benchmarks/output/

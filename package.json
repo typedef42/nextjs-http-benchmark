@@ -1,5 +1,12 @@
 {
   "name": "nextjs-http-benchmark",
+  "description": "Next.js with different http/2 server benchmark",
+  "author": "Yannis Torres",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/typedef42/nextjs-http-benchmark.git"
+  },
   "scripts": {
     "dev-next": "cross-env NODE_ENV=development next",
     "dev-fastify": "cross-env NODE_ENV=development node ./server/server-fastify-h2.js",
@@ -13,7 +20,8 @@
     "stage-https": "cross-env NODE_ENV=production node ./server/server-https.js",
     "stage-express": "cross-env NODE_ENV=production node ./server/server-express-h2.js",
     "stage-fastify": "cross-env NODE_ENV=production node ./server/server-fastify-h2.js",
-    "dc:up": "docker-compose up --build -d",
+    "dc:build": "docker-compose up --build -d",
+    "dc:up": "docker-compose up -d",
     "dc:down": "docker-compose down",
     "generate-certificate": "openssl req -x509 -newkey rsa:2048 -nodes -sha256 -keyout privateKey.key -out certificate.crt"
   },
