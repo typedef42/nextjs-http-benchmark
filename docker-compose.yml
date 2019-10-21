@@ -10,7 +10,10 @@ services:
     image: h2-tests_server-next
     container_name: h2-tests_next
     networks:
+      outside-world:
       internal-network:
+    ports:
+      - "3000:3000"
     labels:
       - "traefik.enable=true"
       - "traefik.backend=srv-next"
@@ -27,7 +30,10 @@ services:
     image: h2-tests_server-https
     container_name: h2-tests_https
     networks:
+      outside-world:
       internal-network:
+    ports:
+      - "3001:3001"
     volumes:
       - "./certs/:/certs/"
     labels:
@@ -47,7 +53,10 @@ services:
     image: h2-tests_server-express
     container_name: h2-tests_express
     networks:
+      outside-world:
       internal-network:
+    ports:
+      - "3002:3002"
     volumes:
       - "./certs/:/certs/"
     labels:
@@ -75,7 +84,10 @@ services:
     image: h2-tests_server-fastify
     container_name: h2-tests_fastify
     networks:
+      outside-world:
       internal-network:
+    ports:
+      - "3003:3003"
     volumes:
       - "./certs/:/certs/"
     labels:
@@ -94,19 +106,22 @@ services:
     ports:
       - "6565:6565"
     volumes:
-      - "./benchmarks/:/scripts/"
-      - "./static/k6-out/:/output/"
+      - "./benchmarks/k6/:/scripts/"
+      - "./static/benchmark-output/:/output/"
     command: "version"
 
   benchmark:
     container_name: h2-tests_benchmark
-    image: h2-tests_server-benchmark
+    image: h2-tests_benchmark
     build:
       context: .
       dockerfile: Dockerfile.benchmark
     networks:
       internal-network:
+    cap_add:
+      - SYS_ADMIN
     volumes:
+      - "./benchmarks/:/app/"
       - "./static/benchmark-output/:/output/"
 
   traefik:

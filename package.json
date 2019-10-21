@@ -20,10 +20,12 @@
     "stage-https": "cross-env NODE_ENV=production node ./server/server-https.js",
     "stage-express": "cross-env NODE_ENV=production node ./server/server-express-h2.js",
     "stage-fastify": "cross-env NODE_ENV=production node ./server/server-fastify-h2.js",
+    "benchmark": "docker-compose run benchmark npm run start",
+    "benchmark-k6": "./benchmarks/k6/run-k6.sh",
     "dc:build": "docker-compose up --build -d",
     "dc:up": "docker-compose up -d",
     "dc:down": "docker-compose down",
-    "generate-certificate": "openssl req -x509 -newkey rsa:2048 -nodes -sha256 -keyout privateKey.key -out certificate.crt"
+    "generate-certificate": "openssl req -x509 -days 365 -newkey rsa:2048 -nodes -sha256 -keyout privateKey.key -out certificate.crt"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
@@ -71,6 +73,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.12.3",
     "eslint-plugin-security": "^1.4.0",
+    "jq": "^1.7.2",
     "prettier": "^1.18.2"
   },
   "config": {

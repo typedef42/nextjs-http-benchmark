@@ -12,7 +12,7 @@ insecureSkipVerify = true
 [entryPoints]
   [entryPoints.dashboard]
     address = ":4242"
-      [entryPoints.dashboard.tls]
+      # [entryPoints.dashboard.tls]
   [entryPoints.http]
     address = ":80"
     compress = true
@@ -22,6 +22,9 @@ insecureSkipVerify = true
     address = ":443"
     compress = true
       [entryPoints.https.tls]
+        [entryPoints.https.tls.certificate]
+          certFile = "/certs/certificate.crt"
+          keyFile = "/certs/privateKey.key"
 
 [api]
 entrypoint="dashboard"
