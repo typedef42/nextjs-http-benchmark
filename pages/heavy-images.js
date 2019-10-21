@@ -3,7 +3,7 @@ import { Card, Row, Col, Button } from "react-bootstrap";
 
 import Head from "../components/head";
 
-export default class Home extends React.Component {
+export default class HeavyImages extends React.Component {
   rowSize = 100;
   colSize = 5;
 

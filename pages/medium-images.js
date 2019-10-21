@@ -3,7 +3,7 @@ import { Card, Row, Col, Button } from "react-bootstrap";
 
 import Head from "../components/head";
 
-export default class Home extends React.Component {
+export default class MediumImages extends React.Component {
   rowSize = 10;
   colSize = 5;
 
