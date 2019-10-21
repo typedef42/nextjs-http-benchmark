@@ -8,10 +8,11 @@
     "url": "https://github.com/typedef42/nextjs-http-benchmark.git"
   },
   "scripts": {
-    "benchmark": "cross-env NODE_ENV=production node ./index.js"
+    "start": "cross-env NODE_ENV=production node ./index.js"
   },
   "dependencies": {
     "cross-env": "^6.0.3",
+    "node-jq": "^1.10.3",
     "puppeteer": "1.20.0"
   },
   "devDependencies": {}
