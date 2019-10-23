@@ -21,7 +21,7 @@ const Head = props => (
     <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=0" />
     <meta name="theme-color" content="#4a0780" />
 
-    <link rel="stylesheet" href="./static/bootstrap.min.css" crossOrigin="anonymous"></link>
+    <link rel="stylesheet" href="./static/css/bootstrap.min.css" crossOrigin="anonymous"></link>
   </NextHead>
 );
 

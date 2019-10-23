@@ -1,0 +1,26 @@
+starting benchmark...
+spawning thread #0: 1 total client(s). 10000 total requests
+TLS Protocol: TLSv1.2
+Cipher: ECDHE-RSA-AES128-GCM-SHA256
+Server Temp Key: ECDH P-256 256 bits
+Application protocol: h2
+progress: 10% done
+progress: 20% done
+progress: 30% done
+progress: 40% done
+progress: 50% done
+progress: 60% done
+progress: 70% done
+progress: 80% done
+progress: 90% done
+progress: 100% done
+
+finished in 94.96s, 105.31 req/s, 59.13MB/s
+requests: 10000 total, 10000 started, 10000 done, 10000 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 10000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 5.48GB (5887795977) total, 90.22KB (92382) headers (space savings 95.78%), 5.48GB (5884220000) data
+                     min         max         mean         sd        +/- sd
+time for request:     5.86ms     51.66ms      9.48ms      4.43ms    94.16%
+time for connect:    10.71ms     10.71ms     10.71ms         0us   100.00%
+time to 1st byte:    26.56ms     26.56ms     26.56ms         0us   100.00%
+req/s           :     105.31      105.31      105.31        0.00   100.00%

@@ -1,0 +1,983 @@
+{
+  "express": {
+    "noproxy": {
+      "basic": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "883.72",
+        "duration": "11.32s",
+        "trafficSpeed": "1.80MB/s",
+        "trafficSummary": "20.40MB (21390117) total, 48.89KB (50068) headers (space savings 95.83%), 20.09MB (21070000) data",
+        "timeForReq": "1.12ms",
+        "timeForCon": "11.61ms",
+        "timeForData": "157.22ms"
+      },
+      "data-bin-16ko": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "806.73",
+        "duration": "12.40s",
+        "trafficSpeed": "12.64MB/s",
+        "trafficSummary": "156.69MB (164302647) total, 78.22KB (80098) headers (space savings 95.95%), 156.25MB (163840000) data",
+        "timeForReq": "1.23ms",
+        "timeForCon": "4.40ms",
+        "timeForData": "9.44ms"
+      },
+      "data-bin-8mo": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "7.54",
+        "duration": "1326.10s",
+        "trafficSpeed": "60.39MB/s",
+        "trafficSummary": "78.21GB (83978590150) total, 78.22KB (80101) headers (space savings 96.03%), 78.13GB (83886080000) data",
+        "timeForReq": "132.60ms",
+        "timeForCon": "3.06ms",
+        "timeForData": "7.84ms"
+      },
+      "data-heavy-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "56.01",
+        "duration": "178.53s",
+        "trafficSpeed": "49.85MB/s",
+        "trafficSummary": "8.69GB (9332531481) total, 78.23KB (80107) headers (space savings 96.13%), 8.68GB (9321940000) data",
+        "timeForReq": "17.84ms",
+        "timeForCon": "6.43ms",
+        "timeForData": "9.08ms"
+      },
+      "data-small-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "787.02",
+        "duration": "12.71s",
+        "trafficSpeed": "11.35MB/s",
+        "trafficSummary": "144.21MB (151218757) total, 78.23KB (80105) headers (space savings 96.09%), 143.78MB (150760000) data",
+        "timeForReq": "1.26ms",
+        "timeForCon": "4.42ms",
+        "timeForData": "12.80ms"
+      },
+      "heavy": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "117.28",
+        "duration": "85.27s",
+        "trafficSpeed": "22.83MB/s",
+        "trafficSummary": "1.90GB (2040760121) total, 48.90KB (50072) headers (space savings 95.96%), 1.90GB (2038280000) data",
+        "timeForReq": "8.51ms",
+        "timeForCon": "3.77ms",
+        "timeForData": "10.28ms"
+      },
+      "img-jpg": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "88.53",
+        "duration": "112.96s",
+        "trafficSpeed": "49.74MB/s",
+        "trafficSummary": "5.49GB (5891034265) total, 78.21KB (80092) headers (space savings 95.69%), 5.48GB (5884220000) data",
+        "timeForReq": "11.28ms",
+        "timeForCon": "3.31ms",
+        "timeForData": "6.67ms"
+      },
+      "img-png": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "364.23",
+        "duration": "27.45s",
+        "trafficSpeed": "34.92MB/s",
+        "trafficSummary": "958.68MB (1005252701) total, 78.21KB (80089) headers (space savings 95.67%), 957.30MB (1003800000) data",
+        "timeForReq": "2.74ms",
+        "timeForCon": "3.18ms",
+        "timeForData": "15.79ms"
+      },
+      "landingpage": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "513.96",
+        "duration": "19.46s",
+        "trafficSpeed": "10.49MB/s",
+        "trafficSummary": "204.19MB (214110119) total, 48.90KB (50070) headers (space savings 95.90%), 203.71MB (213610000) data",
+        "timeForReq": "1.94ms",
+        "timeForCon": "3.12ms",
+        "timeForData": "12.37ms"
+      },
+      "low": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "829.60",
+        "duration": "12.05s",
+        "trafficSpeed": "3.30MB/s",
+        "trafficSummary": "39.75MB (41680119) total, 48.90KB (50070) headers (space savings 95.86%), 39.44MB (41360000) data",
+        "timeForReq": "1.20ms",
+        "timeForCon": "15.36ms",
+        "timeForData": "32.84ms"
+      },
+      "medium": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "550.86",
+        "duration": "18.15s",
+        "trafficSpeed": "11.72MB/s",
+        "trafficSummary": "212.77MB (223110120) total, 48.90KB (50071) headers (space savings 95.90%), 212.30MB (222610000) data",
+        "timeForReq": "1.81ms",
+        "timeForCon": "4.46ms",
+        "timeForData": "9.08ms"
+      }
+    },
+    "traefik": {
+      "basic": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "450.24",
+        "duration": "22.21s",
+        "trafficSpeed": "937.45KB/s",
+        "trafficSummary": "20.33MB (21320664) total, 68.95KB (70609) headers (space savings 95.89%), 20.09MB (21070000) data",
+        "timeForReq": "2.21ms",
+        "timeForCon": "3.44ms",
+        "timeForData": "15.89ms"
+      },
+      "data-bin-16ko": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "401.03",
+        "duration": "24.94s",
+        "trafficSpeed": "6.28MB/s",
+        "trafficSummary": "156.61MB (164214687) total, 98.35KB (100708) headers (space savings 95.97%), 156.25MB (163840000) data",
+        "timeForReq": "2.48ms",
+        "timeForCon": "4.42ms",
+        "timeForData": "15.16ms"
+      },
+      "data-bin-8mo": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "6.28",
+        "duration": "1591.69s",
+        "trafficSpeed": "50.29MB/s",
+        "trafficSummary": "78.17GB (83932956431) total, 136.64KB (139916) headers (space savings 94.49%), 78.13GB (83886080000) data",
+        "timeForReq": "159.15ms",
+        "timeForCon": "5.01ms",
+        "timeForData": "18.21ms"
+      },
+      "data-heavy-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "41.28",
+        "duration": "242.22s",
+        "trafficSpeed": "36.72MB/s",
+        "trafficSummary": "8.69GB (9327508150) total, 103.70KB (106184) headers (space savings 95.90%), 8.68GB (9321940000) data",
+        "timeForReq": "24.21ms",
+        "timeForCon": "4.76ms",
+        "timeForData": "12.93ms"
+      },
+      "data-small-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "376.33",
+        "duration": "26.57s",
+        "trafficSpeed": "5.42MB/s",
+        "trafficSummary": "144.14MB (151146201) total, 98.38KB (100738) headers (space savings 96.08%), 143.78MB (150760000) data",
+        "timeForReq": "2.64ms",
+        "timeForCon": "3.47ms",
+        "timeForData": "11.09ms"
+      },
+      "heavy": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "92.82",
+        "duration": "107.74s",
+        "trafficSpeed": "18.06MB/s",
+        "trafficSummary": "1.90GB (2039732709) total, 70.97KB (72675) headers (space savings 95.87%), 1.90GB (2038280000) data",
+        "timeForReq": "10.76ms",
+        "timeForCon": "4.06ms",
+        "timeForData": "16.25ms"
+      },
+      "img-jpg": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "58.48",
+        "duration": "171.00s",
+        "trafficSpeed": "32.84MB/s",
+        "trafficSummary": "5.48GB (5887874603) total, 101.93KB (104372) headers (space savings 95.61%), 5.48GB (5884220000) data",
+        "timeForReq": "17.08ms",
+        "timeForCon": "4.71ms",
+        "timeForData": "18.52ms"
+      },
+      "img-png": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "187.12",
+        "duration": "53.44s",
+        "trafficSpeed": "17.93MB/s",
+        "trafficSummary": "958.17MB (1004718652) total, 98.97KB (101343) headers (space savings 95.72%), 957.30MB (1003800000) data",
+        "timeForReq": "5.33ms",
+        "timeForCon": "4.76ms",
+        "timeForData": "17.05ms"
+      },
+      "landingpage": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "274.07",
+        "duration": "36.49s",
+        "trafficSpeed": "5.59MB/s",
+        "trafficSummary": "204.13MB (214041843) total, 69.27KB (70933) headers (space savings 95.92%), 203.71MB (213610000) data",
+        "timeForReq": "3.63ms",
+        "timeForCon": "4.32ms",
+        "timeForData": "13.04ms"
+      },
+      "low": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "423.38",
+        "duration": "23.62s",
+        "trafficSpeed": "1.68MB/s",
+        "trafficSummary": "39.77MB (41700689) total, 68.98KB (70634) headers (space savings 95.92%), 39.44MB (41360000) data",
+        "timeForReq": "2.35ms",
+        "timeForCon": "4.31ms",
+        "timeForData": "10.45ms"
+      },
+      "medium": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "285.95",
+        "duration": "34.97s",
+        "trafficSpeed": "6.08MB/s",
+        "trafficSummary": "212.71MB (223043801) total, 69.25KB (70911) headers (space savings 95.92%), 212.30MB (222610000) data",
+        "timeForReq": "3.48ms",
+        "timeForCon": "4.70ms",
+        "timeForData": "11.64ms"
+      }
+    }
+  },
+  "fastify": {
+    "noproxy": {
+      "basic": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "1261.55",
+        "duration": "7.93s",
+        "trafficSpeed": "2.62MB/s",
+        "trafficSummary": "20.73MB (21740261) total, 390.86KB (400243) headers (space savings 73.84%), 20.09MB (21070000) data",
+        "timeForReq": "784us",
+        "timeForCon": "13.53ms",
+        "timeForData": "87.95ms"
+      },
+      "data-bin-16ko": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "1008.92",
+        "duration": "9.91s",
+        "trafficSpeed": "15.82MB/s",
+        "trafficSummary": "156.83MB (164452830) total, 312.80KB (320312) headers (space savings 84.89%), 156.25MB (163840000) data",
+        "timeForReq": "983us",
+        "timeForCon": "2.94ms",
+        "timeForData": "11.14ms"
+      },
+      "data-bin-8mo": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "24.57",
+        "duration": "406.97s",
+        "trafficSpeed": "196.68MB/s",
+        "trafficSummary": "78.17GB (83932789815) total, 351.36KB (359797) headers (space savings 83.34%), 78.13GB (83886080000) data",
+        "timeForReq": "40.68ms",
+        "timeForCon": "4.10ms",
+        "timeForData": "5.50ms"
+      },
+      "data-heavy-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "182.87",
+        "duration": "54.68s",
+        "trafficSpeed": "162.68MB/s",
+        "trafficSummary": "8.69GB (9327671980) total, 333.33KB (341331) headers (space savings 84.56%), 8.68GB (9321940000) data",
+        "timeForReq": "5.46ms",
+        "timeForCon": "3.05ms",
+        "timeForData": "4.91ms"
+      },
+      "data-small-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "955.33",
+        "duration": "10.47s",
+        "trafficSpeed": "13.79MB/s",
+        "trafficSummary": "144.36MB (151370623) total, 312.81KB (320319) headers (space savings 85.37%), 143.78MB (150760000) data",
+        "timeForReq": "1.04ms",
+        "timeForCon": "2.97ms",
+        "timeForData": "10.86ms"
+      },
+      "heavy": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "230.13",
+        "duration": "43.45s",
+        "trafficSpeed": "44.77MB/s",
+        "trafficSummary": "1.90GB (2040061066) total, 420.95KB (431048) headers (space savings 72.54%), 1.90GB (2038280000) data",
+        "timeForReq": "4.33ms",
+        "timeForCon": "3.02ms",
+        "timeForData": "13.95ms"
+      },
+      "img-jpg": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "256.70",
+        "duration": "38.96s",
+        "trafficSpeed": "144.15MB/s",
+        "trafficSummary": "5.48GB (5888062808) total, 332.98KB (340971) headers (space savings 82.95%), 5.48GB (5884220000) data",
+        "timeForReq": "3.88ms",
+        "timeForCon": "3.09ms",
+        "timeForData": "6.93ms"
+      },
+      "img-png": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "686.22",
+        "duration": "14.57s",
+        "trafficSpeed": "65.77MB/s",
+        "trafficSummary": "958.39MB (1004941596) total, 312.91KB (320418) headers (space savings 83.90%), 957.30MB (1003800000) data",
+        "timeForReq": "1.45ms",
+        "timeForCon": "3.42ms",
+        "timeForData": "14.43ms"
+      },
+      "landingpage": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "1853.02",
+        "duration": "5.40s",
+        "trafficSpeed": "213.57KB/s",
+        "trafficSummary": "1.13MB (1180202) total, 78.30KB (80184) headers (space savings 92.14%), 810.55KB (830000) data",
+        "timeForReq": "531us",
+        "timeForCon": "3.97ms",
+        "timeForData": "8.59ms"
+      },
+      "low": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "1271.58",
+        "duration": "7.86s",
+        "trafficSpeed": "5.10MB/s",
+        "trafficSummary": "40.09MB (42040261) total, 400.63KB (410243) headers (space savings 73.36%), 39.44MB (41360000) data",
+        "timeForReq": "779us",
+        "timeForCon": "4.05ms",
+        "timeForData": "12.96ms"
+      },
+      "medium": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "993.15",
+        "duration": "10.07s",
+        "trafficSpeed": "21.16MB/s",
+        "trafficSummary": "213.04MB (223390330) total, 410.46KB (420312) headers (space savings 72.88%), 212.30MB (222610000) data",
+        "timeForReq": "999us",
+        "timeForCon": "2.67ms",
+        "timeForData": "13.52ms"
+      }
+    },
+    "traefik": {
+      "basic": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "588.25",
+        "duration": "16.00s",
+        "trafficSpeed": "1.20MB/s",
+        "trafficSummary": "20.33MB (21320549) total, 68.84KB (70494) headers (space savings 95.90%), 20.09MB (21070000) data",
+        "timeForReq": "1.69ms",
+        "timeForCon": "4.40ms",
+        "timeForData": "13.99ms"
+      },
+      "data-bin-16ko": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "476.76",
+        "duration": "20.97s",
+        "trafficSpeed": "7.47MB/s",
+        "trafficSummary": "156.59MB (164200654) total, 88.48KB (90599) headers (space savings 96.08%), 156.25MB (163840000) data",
+        "timeForReq": "2.09ms",
+        "timeForCon": "3.93ms",
+        "timeForData": "10.65ms"
+      },
+      "data-bin-8mo": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "10.51",
+        "duration": "951.37s",
+        "trafficSpeed": "84.14MB/s",
+        "trafficSummary": "78.17GB (83932526128) total, 110.89KB (113551) headers (space savings 95.17%), 78.13GB (83886080000) data",
+        "timeForReq": "95.12ms",
+        "timeForCon": "3.87ms",
+        "timeForData": "43.29ms"
+      },
+      "data-heavy-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "77.99",
+        "duration": "128.23s",
+        "trafficSpeed": "69.37MB/s",
+        "trafficSummary": "8.69GB (9327406958) total, 91.09KB (93273) headers (space savings 96.11%), 8.68GB (9321940000) data",
+        "timeForReq": "12.81ms",
+        "timeForCon": "3.77ms",
+        "timeForData": "11.09ms"
+      },
+      "data-small-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "440.40",
+        "duration": "22.71s",
+        "trafficSpeed": "6.35MB/s",
+        "trafficSummary": "144.13MB (151134531) total, 88.53KB (90652) headers (space savings 96.19%), 143.78MB (150760000) data",
+        "timeForReq": "2.26ms",
+        "timeForCon": "4.81ms",
+        "timeForData": "9.94ms"
+      },
+      "heavy": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "141.90",
+        "duration": "70.47s",
+        "trafficSpeed": "27.60MB/s",
+        "trafficSummary": "1.90GB (2039701877) total, 70.14KB (71822) headers (space savings 95.92%), 1.90GB (2038280000) data",
+        "timeForReq": "7.03ms",
+        "timeForCon": "3.92ms",
+        "timeForData": "15.74ms"
+      },
+      "img-jpg": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "105.31",
+        "duration": "94.96s",
+        "trafficSpeed": "59.13MB/s",
+        "trafficSummary": "5.48GB (5887795977) total, 90.22KB (92382) headers (space savings 95.78%), 5.48GB (5884220000) data",
+        "timeForReq": "9.48ms",
+        "timeForCon": "10.71ms",
+        "timeForData": "26.56ms"
+      },
+      "img-png": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "294.73",
+        "duration": "33.93s",
+        "trafficSpeed": "28.24MB/s",
+        "trafficSummary": "958.14MB (1004685896) total, 88.76KB (90889) headers (space savings 95.83%), 957.30MB (1003800000) data",
+        "timeForReq": "3.38ms",
+        "timeForCon": "5.03ms",
+        "timeForData": "13.13ms"
+      },
+      "landingpage": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "622.68",
+        "duration": "16.06s",
+        "trafficSpeed": "64.49KB/s",
+        "trafficSummary": "1.01MB (1060484) total, 49.25KB (50429) headers (space savings 95.83%), 810.55KB (830000) data",
+        "timeForReq": "1.59ms",
+        "timeForCon": "3.77ms",
+        "timeForData": "10.06ms"
+      },
+      "low": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "528.58",
+        "duration": "18.92s",
+        "trafficSpeed": "2.10MB/s",
+        "trafficSummary": "39.77MB (41700596) total, 68.89KB (70541) headers (space savings 95.92%), 39.44MB (41360000) data",
+        "timeForReq": "1.88ms",
+        "timeForCon": "4.21ms",
+        "timeForData": "8.77ms"
+      },
+      "medium": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "425.28",
+        "duration": "23.51s",
+        "trafficSpeed": "9.05MB/s",
+        "trafficSummary": "212.71MB (223040712) total, 69.00KB (70657) headers (space savings 95.94%), 212.30MB (222610000) data",
+        "timeForReq": "2.34ms",
+        "timeForCon": "4.12ms",
+        "timeForData": "9.50ms"
+      }
+    }
+  },
+  "https": {
+    "noproxy": {
+      "basic": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1684.62",
+        "duration": "5.94s",
+        "trafficSpeed": "3.72MB/s",
+        "trafficSummary": "22.06MB (23130000) total, 1.55MB (1630000) headers (space savings 0.00%), 20.09MB (21070000) data",
+        "timeForReq": "589us",
+        "timeForCon": "26.44ms",
+        "timeForData": "123.98ms"
+      },
+      "data-bin-16ko": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1721.18",
+        "duration": "5.81s",
+        "trafficSpeed": "27.34MB/s",
+        "trafficSummary": "158.85MB (166570000) total, 2.12MB (2220000) headers (space savings 0.00%), 156.25MB (163840000) data",
+        "timeForReq": "579us",
+        "timeForCon": "3.11ms",
+        "timeForData": "4.93ms"
+      },
+      "data-bin-8mo": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "23.10",
+        "duration": "432.84s",
+        "trafficSpeed": "184.83MB/s",
+        "trafficSummary": "78.13GB (83888850000) total, 2.16MB (2260000) headers (space savings 0.00%), 78.13GB (83886080000) data",
+        "timeForReq": "43.28ms",
+        "timeForCon": "3.28ms",
+        "timeForData": "4.67ms"
+      },
+      "data-heavy-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "149.15",
+        "duration": "67.05s",
+        "trafficSpeed": "132.64MB/s",
+        "trafficSummary": "8.68GB (9324760000) total, 2.20MB (2310000) headers (space savings 0.00%), 8.68GB (9321940000) data",
+        "timeForReq": "6.70ms",
+        "timeForCon": "3.74ms",
+        "timeForData": "10.62ms"
+      },
+      "data-small-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1443.66",
+        "duration": "6.93s",
+        "trafficSpeed": "21.14MB/s",
+        "trafficSummary": "146.45MB (153560000) total, 2.18MB (2290000) headers (space savings 0.00%), 143.78MB (150760000) data",
+        "timeForReq": "690us",
+        "timeForCon": "3.39ms",
+        "timeForData": "5.19ms"
+      },
+      "heavy": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "235.98",
+        "duration": "42.38s",
+        "trafficSpeed": "45.92MB/s",
+        "trafficSummary": "1.90GB (2040380000) total, 1.59MB (1670000) headers (space savings 0.00%), 1.90GB (2038280000) data",
+        "timeForReq": "4.23ms",
+        "timeForCon": "3.60ms",
+        "timeForData": "7.51ms"
+      },
+      "img-jpg": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "245.01",
+        "duration": "40.81s",
+        "trafficSpeed": "137.55MB/s",
+        "trafficSummary": "5.48GB (5886830000) total, 2.00MB (2100000) headers (space savings 0.00%), 5.48GB (5884220000) data",
+        "timeForReq": "4.08ms",
+        "timeForCon": "2.93ms",
+        "timeForData": "4.14ms"
+      },
+      "img-png": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "952.05",
+        "duration": "10.50s",
+        "trafficSpeed": "91.38MB/s",
+        "trafficSummary": "959.78MB (1006400000) total, 1.99MB (2090000) headers (space savings 0.00%), 957.30MB (1003800000) data",
+        "timeForReq": "1.05ms",
+        "timeForCon": "4.06ms",
+        "timeForData": "13.17ms"
+      },
+      "landingpage": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1037.94",
+        "duration": "9.63s",
+        "trafficSpeed": "21.35MB/s",
+        "trafficSummary": "205.70MB (215690000) total, 1.57MB (1650000) headers (space savings 0.00%), 203.71MB (213610000) data",
+        "timeForReq": "961us",
+        "timeForCon": "3.18ms",
+        "timeForData": "12.90ms"
+      },
+      "low": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1772.41",
+        "duration": "5.64s",
+        "trafficSpeed": "7.34MB/s",
+        "trafficSummary": "41.42MB (43430000) total, 1.56MB (1640000) headers (space savings 0.00%), 39.44MB (41360000) data",
+        "timeForReq": "561us",
+        "timeForCon": "8.45ms",
+        "timeForData": "12.18ms"
+      },
+      "medium": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1164.50",
+        "duration": "8.59s",
+        "trafficSpeed": "24.95MB/s",
+        "trafficSummary": "214.28MB (224690000) total, 1.57MB (1650000) headers (space savings 0.00%), 212.30MB (222610000) data",
+        "timeForReq": "855us",
+        "timeForCon": "18.40ms",
+        "timeForData": "21.89ms"
+      }
+    },
+    "traefik": {
+      "basic": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "669.11",
+        "duration": "14.95s",
+        "trafficSpeed": "1.36MB/s",
+        "trafficSummary": "20.33MB (21320480) total, 68.77KB (70425) headers (space savings 95.91%), 20.09MB (21070000) data",
+        "timeForReq": "1.49ms",
+        "timeForCon": "3.60ms",
+        "timeForData": "11.00ms"
+      },
+      "data-bin-16ko": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "595.97",
+        "duration": "16.78s",
+        "trafficSpeed": "9.33MB/s",
+        "trafficSummary": "156.59MB (164200539) total, 88.36KB (90484) headers (space savings 96.08%), 156.25MB (163840000) data",
+        "timeForReq": "1.67ms",
+        "timeForCon": "3.74ms",
+        "timeForData": "7.75ms"
+      },
+      "data-bin-8mo": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "11.86",
+        "duration": "843.28s",
+        "trafficSpeed": "94.92MB/s",
+        "trafficSummary": "78.17GB (83932451087) total, 108.25KB (110852) headers (space savings 95.28%), 78.13GB (83886080000) data",
+        "timeForReq": "84.31ms",
+        "timeForCon": "4.47ms",
+        "timeForData": "26.21ms"
+      },
+      "data-heavy-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "84.30",
+        "duration": "118.62s",
+        "trafficSpeed": "74.99MB/s",
+        "trafficSummary": "8.69GB (9327401220) total, 90.86KB (93043) headers (space savings 96.12%), 8.68GB (9321940000) data",
+        "timeForReq": "11.85ms",
+        "timeForCon": "11.04ms",
+        "timeForData": "16.72ms"
+      },
+      "data-small-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "572.97",
+        "duration": "17.45s",
+        "trafficSpeed": "8.26MB/s",
+        "trafficSummary": "144.13MB (151135356) total, 88.39KB (90514) headers (space savings 96.20%), 143.78MB (150760000) data",
+        "timeForReq": "1.73ms",
+        "timeForCon": "4.08ms",
+        "timeForData": "8.14ms"
+      },
+      "heavy": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "148.68",
+        "duration": "67.26s",
+        "trafficSpeed": "28.92MB/s",
+        "trafficSummary": "1.90GB (2039791789) total, 70.05KB (71734) headers (space savings 95.92%), 1.90GB (2038280000) data",
+        "timeForReq": "6.71ms",
+        "timeForCon": "4.87ms",
+        "timeForData": "17.23ms"
+      },
+      "img-jpg": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "111.71",
+        "duration": "89.52s",
+        "trafficSpeed": "62.72MB/s",
+        "trafficSummary": "5.48GB (5887791510) total, 90.08KB (92244) headers (space savings 95.79%), 5.48GB (5884220000) data",
+        "timeForReq": "8.94ms",
+        "timeForCon": "3.64ms",
+        "timeForData": "10.02ms"
+      },
+      "img-png": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "373.39",
+        "duration": "26.78s",
+        "trafficSpeed": "35.78MB/s",
+        "trafficSummary": "958.15MB (1004689632) total, 88.60KB (90728) headers (space savings 95.84%), 957.30MB (1003800000) data",
+        "timeForReq": "2.67ms",
+        "timeForCon": "3.77ms",
+        "timeForData": "13.50ms"
+      },
+      "landingpage": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "422.79",
+        "duration": "23.65s",
+        "trafficSpeed": "8.63MB/s",
+        "trafficSummary": "204.21MB (214130712) total, 69.00KB (70657) headers (space savings 95.94%), 203.71MB (213610000) data",
+        "timeForReq": "2.35ms",
+        "timeForCon": "3.76ms",
+        "timeForData": "9.67ms"
+      },
+      "low": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "640.87",
+        "duration": "15.60s",
+        "trafficSpeed": "2.55MB/s",
+        "trafficSummary": "39.77MB (41700528) total, 68.82KB (70473) headers (space savings 95.93%), 39.44MB (41360000) data",
+        "timeForReq": "1.55ms",
+        "timeForCon": "7.53ms",
+        "timeForData": "11.40ms"
+      },
+      "medium": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "457.24",
+        "duration": "21.87s",
+        "trafficSpeed": "9.73MB/s",
+        "trafficSummary": "212.79MB (223130667) total, 68.96KB (70612) headers (space savings 95.94%), 212.30MB (222610000) data",
+        "timeForReq": "2.17ms",
+        "timeForCon": "4.79ms",
+        "timeForData": "11.48ms"
+      }
+    }
+  },
+  "next": {
+    "noproxy": {
+      "basic": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1814.65",
+        "duration": "5.51s",
+        "trafficSpeed": "4.00MB/s",
+        "trafficSummary": "22.06MB (23130000) total, 1.55MB (1630000) headers (space savings 0.00%), 20.09MB (21070000) data",
+        "timeForReq": "549us",
+        "timeForCon": "217us",
+        "timeForData": "3.92ms"
+      },
+      "data-bin-16ko": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1861.35",
+        "duration": "5.37s",
+        "trafficSpeed": "29.57MB/s",
+        "trafficSummary": "158.85MB (166570000) total, 2.12MB (2220000) headers (space savings 0.00%), 156.25MB (163840000) data",
+        "timeForReq": "535us",
+        "timeForCon": "172us",
+        "timeForData": "2.18ms"
+      },
+      "data-bin-8mo": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "30.90",
+        "duration": "323.58s",
+        "trafficSpeed": "247.24MB/s",
+        "trafficSummary": "78.13GB (83888850000) total, 2.16MB (2260000) headers (space savings 0.00%), 78.13GB (83886080000) data",
+        "timeForReq": "32.35ms",
+        "timeForCon": "269us",
+        "timeForData": "1.36ms"
+      },
+      "data-heavy-json": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "241.83",
+        "duration": "41.35s",
+        "trafficSpeed": "215.06MB/s",
+        "trafficSummary": "8.68GB (9324760000) total, 2.20MB (2310000) headers (space savings 0.00%), 8.68GB (9321940000) data",
+        "timeForReq": "4.13ms",
+        "timeForCon": "200us",
+        "timeForData": "2.37ms"
+      },
+      "data-small-json": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1644.12",
+        "duration": "6.08s",
+        "trafficSpeed": "24.08MB/s",
+        "trafficSummary": "146.45MB (153560000) total, 2.18MB (2290000) headers (space savings 0.00%), 143.78MB (150760000) data",
+        "timeForReq": "606us",
+        "timeForCon": "303us",
+        "timeForData": "4.30ms"
+      },
+      "heavy": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "255.03",
+        "duration": "39.21s",
+        "trafficSpeed": "49.63MB/s",
+        "trafficSummary": "1.90GB (2040380000) total, 1.59MB (1670000) headers (space savings 0.00%), 1.90GB (2038280000) data",
+        "timeForReq": "3.92ms",
+        "timeForCon": "500us",
+        "timeForData": "5.18ms"
+      },
+      "img-jpg": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "408.73",
+        "duration": "24.47s",
+        "trafficSpeed": "229.46MB/s",
+        "trafficSummary": "5.48GB (5886830000) total, 2.00MB (2100000) headers (space savings 0.00%), 5.48GB (5884220000) data",
+        "timeForReq": "2.44ms",
+        "timeForCon": "171us",
+        "timeForData": "1.39ms"
+      },
+      "img-png": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1281.36",
+        "duration": "7.80s",
+        "trafficSpeed": "122.98MB/s",
+        "trafficSummary": "959.78MB (1006400000) total, 1.99MB (2090000) headers (space savings 0.00%), 957.30MB (1003800000) data",
+        "timeForReq": "778us",
+        "timeForCon": "502us",
+        "timeForData": "9.86ms"
+      },
+      "landingpage": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1062.95",
+        "duration": "9.41s",
+        "trafficSpeed": "21.86MB/s",
+        "trafficSummary": "205.70MB (215690000) total, 1.57MB (1650000) headers (space savings 0.00%), 203.71MB (213610000) data",
+        "timeForReq": "939us",
+        "timeForCon": "268us",
+        "timeForData": "5.00ms"
+      },
+      "low": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1915.01",
+        "duration": "5.22s",
+        "trafficSpeed": "7.93MB/s",
+        "trafficSummary": "41.42MB (43430000) total, 1.56MB (1640000) headers (space savings 0.00%), 39.44MB (41360000) data",
+        "timeForReq": "520us",
+        "timeForCon": "244us",
+        "timeForData": "1.33ms"
+      },
+      "medium": {
+        "appProtocol": "http/1.1",
+        "reqSpeed": "1247.31",
+        "duration": "8.02s",
+        "trafficSpeed": "26.73MB/s",
+        "trafficSummary": "214.28MB (224690000) total, 1.57MB (1650000) headers (space savings 0.00%), 212.30MB (222610000) data",
+        "timeForReq": "799us",
+        "timeForCon": "278us",
+        "timeForData": "1.89ms"
+      }
+    },
+    "traefik": {
+      "basic": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "650.70",
+        "duration": "15.37s",
+        "trafficSpeed": "1.32MB/s",
+        "trafficSummary": "20.33MB (21320527) total, 68.82KB (70472) headers (space savings 95.90%), 20.09MB (21070000) data",
+        "timeForReq": "1.53ms",
+        "timeForCon": "15.62ms",
+        "timeForData": "39.82ms"
+      },
+      "data-bin-16ko": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "617.68",
+        "duration": "16.19s",
+        "trafficSpeed": "9.68MB/s",
+        "trafficSummary": "156.68MB (164290539) total, 88.36KB (90484) headers (space savings 96.08%), 156.25MB (163840000) data",
+        "timeForReq": "1.61ms",
+        "timeForCon": "3.56ms",
+        "timeForData": "6.02ms"
+      },
+      "data-bin-8mo": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "14.75",
+        "duration": "677.79s",
+        "trafficSpeed": "118.10MB/s",
+        "trafficSummary": "78.17GB (83932671401) total, 104.27KB (106769) headers (space savings 95.46%), 78.13GB (83886080000) data",
+        "timeForReq": "67.76ms",
+        "timeForCon": "4.30ms",
+        "timeForData": "7.28ms"
+      },
+      "data-heavy-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "102.36",
+        "duration": "97.70s",
+        "trafficSpeed": "91.05MB/s",
+        "trafficSummary": "8.69GB (9327468860) total, 90.31KB (92481) headers (space savings 96.15%), 8.68GB (9321940000) data",
+        "timeForReq": "9.76ms",
+        "timeForCon": "4.11ms",
+        "timeForData": "6.52ms"
+      },
+      "data-small-json": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "557.58",
+        "duration": "17.93s",
+        "trafficSpeed": "8.04MB/s",
+        "trafficSummary": "144.21MB (151217882) total, 88.42KB (90537) headers (space savings 96.20%), 143.78MB (150760000) data",
+        "timeForReq": "1.78ms",
+        "timeForCon": "3.86ms",
+        "timeForData": "8.28ms"
+      },
+      "heavy": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "166.25",
+        "duration": "60.15s",
+        "trafficSpeed": "32.34MB/s",
+        "trafficSummary": "1.90GB (2039703536) total, 69.90KB (71573) headers (space savings 95.93%), 1.90GB (2038280000) data",
+        "timeForReq": "6.00ms",
+        "timeForCon": "4.29ms",
+        "timeForData": "11.01ms"
+      },
+      "img-jpg": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "131.21",
+        "duration": "76.21s",
+        "trafficSpeed": "73.68MB/s",
+        "trafficSummary": "5.48GB (5887855075) total, 89.79KB (91945) headers (space savings 95.80%), 5.48GB (5884220000) data",
+        "timeForReq": "7.60ms",
+        "timeForCon": "3.50ms",
+        "timeForData": "12.22ms"
+      },
+      "img-png": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "401.32",
+        "duration": "24.92s",
+        "trafficSpeed": "38.45MB/s",
+        "trafficSummary": "958.18MB (1004719988) total, 88.56KB (90682) headers (space savings 95.84%), 957.30MB (1003800000) data",
+        "timeForReq": "2.48ms",
+        "timeForCon": "4.68ms",
+        "timeForData": "7.81ms"
+      },
+      "landingpage": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "414.44",
+        "duration": "24.13s",
+        "trafficSpeed": "8.46MB/s",
+        "trafficSummary": "204.21MB (214130736) total, 69.02KB (70681) headers (space savings 95.94%), 203.71MB (213610000) data",
+        "timeForReq": "2.40ms",
+        "timeForCon": "3.50ms",
+        "timeForData": "6.19ms"
+      },
+      "low": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "645.85",
+        "duration": "15.48s",
+        "trafficSpeed": "2.57MB/s",
+        "trafficSummary": "39.77MB (41700503) total, 68.80KB (70448) headers (space savings 95.93%), 39.44MB (41360000) data",
+        "timeForReq": "1.54ms",
+        "timeForCon": "4.27ms",
+        "timeForData": "6.56ms"
+      },
+      "medium": {
+        "tlsProtocol": "TLSv1.2",
+        "appProtocol": "h2",
+        "reqSpeed": "477.32",
+        "duration": "20.95s",
+        "trafficSpeed": "10.16MB/s",
+        "trafficSummary": "212.79MB (223128955) total, 68.91KB (70565) headers (space savings 95.94%), 212.30MB (222610000) data",
+        "timeForReq": "2.08ms",
+        "timeForCon": "3.57ms",
+        "timeForData": "6.16ms"
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+starting benchmark...
+spawning thread #0: 1 total client(s). 10000 total requests
+Application protocol: http/1.1
+progress: 10% done
+progress: 20% done
+progress: 30% done
+progress: 40% done
+progress: 50% done
+progress: 60% done
+progress: 70% done
+progress: 80% done
+progress: 90% done
+progress: 100% done
+
+finished in 323.58s, 30.90 req/s, 247.24MB/s
+requests: 10000 total, 10000 started, 10000 done, 10000 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 10000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 78.13GB (83888850000) total, 2.16MB (2260000) headers (space savings 0.00%), 78.13GB (83886080000) data
+                     min         max         mean         sd        +/- sd
+time for request:    22.13ms     83.74ms     32.35ms      9.48ms    82.62%
+time for connect:      269us       269us       269us         0us   100.00%
+time to 1st byte:     1.36ms      1.36ms      1.36ms         0us   100.00%
+req/s           :      30.90       30.90       30.90        0.00   100.00%
