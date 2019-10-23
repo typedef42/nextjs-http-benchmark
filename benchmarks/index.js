@@ -60,9 +60,31 @@ const testPage = async (url, options) => {
   console.log("");
 };
 
+const bachTest = async tests => {
+  for await (let t of tests) {
+    let errCount = 0;
+
+    if (enableLocalTests && !t.localUrl) {
+      continue;
+    }
+    try {
+      const results = await testPage(enableLocalTests ? t.localUrl : t.url, {
+        browser: browser,
+        // network: NETWORK_PRESETS.WiFi,
+        networkLabel: "WiFi",
+        iterations: 100
+        // screenshot: `${enableLocalTests ? "./" : "/"}output/${t.name}_${
+        //   t.server
+        // }.jpg`
+      });
+    } catch (err) {
+      errCount++;
+    }
+  }
+};
+
 puppeteer
   .launch({
-    // args: ["--no-sandbox", "--disable-setuid-sandbox"],
     args: ["--disable-dev-shm-usage"],
     executablePath: "/usr/bin/google-chrome-unstable",
     ignoreHTTPSErrors: true,
@@ -81,26 +103,7 @@ puppeteer
     const tests = testsMedium;
     // const tests = testsHeavy;
 
-    for await (let t of tests) {
-      let errCount = 0;
-
-      if (enableLocalTests && !t.localUrl) {
-        continue;
-      }
-      try {
-        const results = await testPage(enableLocalTests ? t.localUrl : t.url, {
-          browser: browser,
-          // network: NETWORK_PRESETS.WiFi,
-          networkLabel: "WiFi",
-          iterations: 100
-          // screenshot: `${enableLocalTests ? "./" : "/"}output/${t.name}_${
-          //   t.server
-          // }.jpg`
-        });
-      } catch (err) {
-        errCount++;
-      }
-    }
+    await bachTest(test);
 
     await browser.close();
   });
