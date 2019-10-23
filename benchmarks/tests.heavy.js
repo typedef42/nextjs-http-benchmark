@@ -2,7 +2,7 @@ const tests = [
   {
     name: "heavy-images",
     server: "NextJS-HTTP",
-    url: "http://h2-tests_next:3000/heavy-images",
+    url: "http://h2tests-next:3000/heavy-images",
     localUrl: "http://localhost:3000/heavy-images"
   },
   {
@@ -14,7 +14,7 @@ const tests = [
   {
     name: "heavy-images",
     server: "NextJS-HTTPS",
-    url: "https://h2-tests_https:3001/heavy-images",
+    url: "https://h2tests-https:3001/heavy-images",
     localUrl: "https://localhost:3001/heavy-images"
   },
   {
@@ -26,7 +26,7 @@ const tests = [
   {
     name: "heavy-images",
     server: "NextJS-Express-SPDY",
-    url: "https://h2-tests_express:3002/heavy-images",
+    url: "https://h2tests-express:3002/heavy-images",
     localUrl: "https://localhost:3002/heavy-images"
   },
   {
@@ -38,7 +38,7 @@ const tests = [
   {
     name: "heavy-images",
     server: "NextJS-fastify",
-    url: "https://h2-tests_fastify:3003/heavy-images",
+    url: "https://h2tests-fastify:3003/heavy-images",
     localUrl: "https://localhost:3003/heavy-images"
   },
   {

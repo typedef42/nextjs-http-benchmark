@@ -2,7 +2,7 @@ const tests = [
   {
     name: "medium-images",
     server: "NextJS-HTTP",
-    url: "http://h2-tests_next:3000/medium-images",
+    url: "http://h2tests-next:3000/medium-images",
     localUrl: "http://localhost:3000/medium-images"
   },
   {
@@ -14,7 +14,7 @@ const tests = [
   {
     name: "medium-images",
     server: "NextJS-HTTPS",
-    url: "https://h2-tests_https:3001/medium-images",
+    url: "https://h2tests-https:3001/medium-images",
     localUrl: "https://localhost:3001/medium-images"
   },
   {
@@ -26,7 +26,7 @@ const tests = [
   {
     name: "medium-images",
     server: "NextJS-Express-SPDY",
-    url: "https://h2-tests_express:3002/medium-images",
+    url: "https://h2tests-express:3002/medium-images",
     localUrl: "https://localhost:3002/medium-images"
   },
   {
@@ -38,7 +38,7 @@ const tests = [
   {
     name: "medium-images",
     server: "NextJS-fastify",
-    url: "https://h2-tests_fastify:3003/medium-images",
+    url: "https://h2tests-fastify:3003/medium-images",
     localUrl: "https://localhost:3003/medium-images"
   },
   {

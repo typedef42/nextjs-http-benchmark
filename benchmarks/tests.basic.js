@@ -2,7 +2,7 @@ const testsBasic = [
   {
     name: "basic",
     server: "NextJS-HTTP",
-    url: "http://h2-tests_next:3000/",
+    url: "http://h2tests-next:3000/",
     localUrl: "http://localhost:3000/"
   },
   {
@@ -13,7 +13,7 @@ const testsBasic = [
   {
     name: "basic",
     server: "NextJS-HTTPS",
-    url: "https://h2-tests_https:3001/",
+    url: "https://h2tests-https:3001/",
     localUrl: "https://localhost:3001/"
   },
   {
@@ -24,7 +24,7 @@ const testsBasic = [
   {
     name: "basic",
     server: "NextJS-Express-SPDY",
-    url: "https://h2-tests_express:3002/",
+    url: "https://h2tests-express:3002/",
     localUrl: "https://localhost:3002/"
   },
   {
@@ -35,7 +35,7 @@ const testsBasic = [
   {
     name: "basic",
     server: "NextJS-fastify",
-    url: "https://h2-tests_fastify:3003/",
+    url: "https://h2tests-fastify:3003/",
     localUrl: "https://localhost:3003/"
   },
   {

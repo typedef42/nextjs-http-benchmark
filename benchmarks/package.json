@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "cross-env": "^6.0.3",
-    "node-jq": "^1.10.3",
-    "puppeteer": "1.20.0"
+    "puppeteer": "1.20.0",
+    "line-by-line": "^0.1.6"
   },
   "devDependencies": {}
 }
