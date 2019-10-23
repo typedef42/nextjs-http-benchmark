@@ -1,0 +1,8 @@
+FROM svagi/h2load
+
+RUN mkdir /app
+WORKDIR /app
+
+COPY ./benchmarks/h2load/ .
+
+ENTRYPOINT [ "/bin/sh" ]

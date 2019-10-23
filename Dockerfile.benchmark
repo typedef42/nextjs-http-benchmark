@@ -1,6 +1,15 @@
 FROM node:10-stretch
 LABEL name "yt-puppeteraas"
 
+RUN mkdir /app
+WORKDIR /app
+
+COPY ./benchmarks/ .
+
+ENV NODE_ENV=production
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
+RUN npm install --production && npm prune --production
+
 # See https://crbug.com/795759
 RUN apt-get update && apt-get install -yq libgconf-2-4
 
@@ -24,22 +33,13 @@ ADD https://github.com/Yelp/dumb-init/releases/download/v1.2.0/dumb-init_1.2.0_a
 RUN chmod +x /usr/local/bin/dumb-init
 ENTRYPOINT ["dumb-init", "--"]
 
-RUN mkdir /app
-WORKDIR /app
-
-ENV NODE_ENV=production
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=1
-RUN npm install --production && npm prune --production
-
 # Add user so we don't need --no-sandbox.
 RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser \
     && mkdir -p /home/pptruser/Downloads \
-    && chown -R pptruser:pptruser /home/pptruser \
-    && chown -R pptruser:pptruser ./node_modules
+    && chown -R pptruser:pptruser /home/pptruser
+    #&& chown -R pptruser:pptruser ./node_modules
 
 # Run everything after as non-privileged user.
 USER pptruser
 
 CMD ["google-chrome-unstable"]
-
-# CMD ["npm", "run", "start"]

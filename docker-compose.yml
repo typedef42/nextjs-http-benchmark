@@ -8,7 +8,7 @@ services:
       args:
         TARGET_PM2_APP: "server-next"
     image: h2-tests_server-next
-    container_name: h2-tests_next
+    container_name: h2tests-next
     networks:
       outside-world:
       internal-network:
@@ -28,7 +28,7 @@ services:
       args:
         TARGET_PM2_APP: "server-https"
     image: h2-tests_server-https
-    container_name: h2-tests_https
+    container_name: h2tests-https
     networks:
       outside-world:
       internal-network:
@@ -51,7 +51,7 @@ services:
       args:
         TARGET_PM2_APP: "server-express"
     image: h2-tests_server-express
-    container_name: h2-tests_express
+    container_name: h2tests-express
     networks:
       outside-world:
       internal-network:
@@ -67,14 +67,6 @@ services:
       - "traefik.frontend.rule=Host:express.test,express.localhost"
       - "traefik.frontend.entryPoints=https"
 
-      # - "traefik.frontend.entryPoints=srv-express"
-      # - "traefik.frontend.rule=Host:express.localhost,express.h2-tests_traefik"
-      # - "traefik.passHostHeader=true"
-      # - "traefik.frontend.rule=PathPrefixStrip:/express"
-      # - "traefik.frontend.redirect.regex=^(.*)/express$$"
-      # - "traefik.frontend.redirect.replacement=$$1/express/"
-      # - "traefik.frontend.rule=PathPrefix:/express;ReplacePathRegex: ^/express/(.*) /$$1"
-
   server_fastify:
     build:
       context: .
@@ -82,7 +74,7 @@ services:
       args:
         TARGET_PM2_APP: "server-fastify"
     image: h2-tests_server-fastify
-    container_name: h2-tests_fastify
+    container_name: h2tests-fastify
     networks:
       outside-world:
       internal-network:
@@ -121,7 +113,17 @@ services:
     cap_add:
       - SYS_ADMIN
     volumes:
-      - "./benchmarks/:/app/"
+      - "./static/benchmark-output/:/output/"
+
+  h2load:
+    container_name: h2-tests_h2load
+    image: h2tests-h2load
+    build:
+      context: .
+      dockerfile: Dockerfile.h2load
+    networks:
+      internal-network:
+    volumes:
       - "./static/benchmark-output/:/output/"
 
   traefik:
@@ -150,11 +152,6 @@ services:
       - "./traefik/traefik.toml:/traefik.toml"
       - "./certs/:/certs/"
     restart: unless-stopped
-    # labels:
-    #   - "traefik.frontend.rule=HostRegexp:traefik.dev"
-    #   - "traefik.frontend.entryPoints=http,https"
-    #   - "traefik.backend=traefik"
-    #   - "traefik.port=8080"
 
 networks:
   internal-network:
