@@ -34,7 +34,7 @@
     "autoprefixer": "^9.3.1",
     "compression": "^1.7.4",
     "express": "^4.17.1",
-    "fastify": "^2.9.0",
+    "fastify": "^2.15.1",
     "fastify-compress": "^0.11.0",
     "fastify-nextjs": "^4.1.1",
     "fastify-static": "^2.5.0",
